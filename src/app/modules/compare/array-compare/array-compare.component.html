@@ -1,0 +1,35 @@
+<div class="container">
+  <h1 class="text-center">Compare Array</h1>
+  <hr />
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-12">
+        <h3>First Box</h3>
+        <h6 class="text-danger" id="errorbox1"></h6>
+        <textarea
+          class="text-area"
+          id="box1"
+          (blur)="notEmpty($event.target)"
+        ></textarea>
+      </div>
+      <div class="col-md-6 col-12">
+        <h3>Second Box</h3>
+        <h6 class="text-danger" id="errorbox2"></h6>
+        <textarea
+          class="text-area"
+          id="box2"
+          (blur)="notEmpty($event.target)"
+        ></textarea>
+      </div>
+      <div class="col-12">
+        <div class="d-grid gap-2 col-6 mx-auto my-2">
+          <button class="btn btn-primary" (click)="compareData()">
+            Compare
+          </button>
+          <h6 class="text-danger" id="resultError"></h6>
+        </div>
+        <textarea class="result-area" disabled></textarea>
+      </div>
+    </div>
+  </div>
+</div>
